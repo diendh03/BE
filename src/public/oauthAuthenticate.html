@@ -8,31 +8,26 @@
 <body class='container'>
   <h1>Authentication On Our Server</h1>
   <form action='/oauth/authorize' method="post" >
-    <p>These inputs should be hidden in production</p>
-    <div class='form-group'>
+    <!-- <p>These inputs should be hidden in production</p> -->
+    <div class='form-group' hidden>
       <label>Client Id</label>
       <input class='form-control' name='client_id'/>
     </div>
-    <div class='form-group'>
+    <div class='form-group' hidden>
       <label>Redirect Uri</label>
       <input class='form-control' name='client_secret'/>
     </div>
-    <div class='form-group'>
+    <div class='form-group' hidden>
       <label>Redirect Uri</label>
       <input class='form-control' name='redirect_uri'/>
     </div>
-    <p>Any other inputs are used to help validate the client, run other custom actions on the server, etc...</p>
-    <p>
-      The defaults for this will successfully login. Anything else will fail.
-      This behavior is <strong>NOT</strong> handled by OAuth, but must be included in your middleware.
-    </p>
     <div class="form-group">
       <label>Username</label>
-      <input class='form-control auth' type="text" name="username" value="username">
+      <input class='form-control auth' type="text" name="username" value="">
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input class='form-control auth' type="text" name="password" value="password" />
+      <input class='form-control auth' type="text" name="password" value="" />
     </div>
     <input type='submit' class='btn btn-success' />
   </form>

@@ -1,5 +1,5 @@
-import User from "../models/user";
-import { signUpSchema, signinSchema } from "../schema/user";
+import User from "../models/user.js";
+import { signUpSchema, signinSchema } from "../schema/user.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { configDotenv } from "dotenv";
@@ -75,7 +75,7 @@ export const signIn = async (req, res) => {
       data: req.user,
     });
   } catch (error) {
-    return res.status(400).json({
+    return res.status(500).json({
       message: "ncc",
     });
   }
