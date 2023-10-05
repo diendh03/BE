@@ -1,6 +1,5 @@
 import passport from "passport";
 import LocalStrategy from "passport-local";
-import User from "../models/user.js";
 import { handleUserLogin } from "../service/loginService.js";
 export const configPassport = () => {
   passport.use(
